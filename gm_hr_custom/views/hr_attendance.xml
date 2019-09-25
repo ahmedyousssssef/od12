@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!--************************* Inherit Form View *************************-->
+
+        <record id="hr_attendance_form" model="ir.ui.view">
+            <field name="name">hr.attendance.form</field>
+            <field name="model">hr.attendance</field>
+            <field name="inherit_id" ref="hr_attendance.hr_attendance_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet//group[1]" position="after">
+                    <group>
+                        <field name="late" widget="float_time"/>
+                        <field name="early" widget="float_time"/>
+                        <field name="over_time" widget="float_time"/>
+                        <field name="approval_one" />
+                        <field name="approval_sec" />
+                    </group>
+                    <!--<group string="OverTime">-->
+                        <!--<field name="over_time" widget="float_time"/>-->
+                        <!--<field name="over_time_amount"/>-->
+                        <!--<field name="over_time_hour"/>-->
+                    <!--</group>-->
+                </xpath>
+            </field>
+        </record>
+
+
+        <!--************************* Inherit Tree View *************************-->
+
+        <record id="hr_attendance_tree" model="ir.ui.view">
+            <field name="name">hr.attendance.tree</field>
+            <field name="model">hr.attendance</field>
+            <field name="inherit_id" ref="hr_attendance.view_attendance_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='check_out']" position="after">
+                    <field name="late" widget="float_time" sum="late"/>
+                    <field name="early" widget="float_time" sum="early"/>
+                    <field name="over_time" widget="float_time" sum="over_time"/>
+                </xpath>
+
+            </field>
+        </record>
+        <!--************************* Inherit Tree View *************************-->
+
+        <record id="hr_attendance_search" model="ir.ui.view">
+            <field name="name">hr.attendance.search</field>
+            <field name="model">hr.attendance</field>
+            <field name="inherit_id" ref="hr_attendance.hr_attendance_view_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[2]" position="replace">
+                    <filter string="Current Month" name="current_month"
+                            domain="[('check_in', '&gt;=', (datetime.date.today().replace(day=1) - datetime.timedelta(days=1)).strftime('%Y-%m-15')),('check_in', '&lt;=', datetime.datetime.now().strftime('%Y-%m-16'))]"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!--************************* Action Inherit *************************-->
+
+        <record id="hr_attendance.hr_attendance_action" model="ir.actions.act_window">
+            <field name="context">{'search_default_employee': '1','search_default_current_month': '1'}</field>
+        </record>
+
+    </data>
+</odoo>

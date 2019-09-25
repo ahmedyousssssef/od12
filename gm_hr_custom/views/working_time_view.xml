@@ -1,0 +1,37 @@
+<odoo>
+    <data>
+        <!-- Inherit Form View to Modify it -->
+        <record id="resource_calendar_form_inherit_001" model="ir.ui.view">
+            <field name="name">resource.calendar.form.inherit</field>
+            <field name="model">resource.calendar</field>
+            <field name="inherit_id" ref="resource.resource_calendar_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="weekend_ids" widget="many2many_tags" options="{'no_create':true}"/>
+                    <field name="attendance_id"/>
+                    <field name="work_period"/>
+                </xpath>
+                <xpath expr="//field[@name='global_leave_ids']" position="after">
+                    <field name="public_holiday_ids">
+                        <tree editable="bottom" delete="false">
+                            <field name="leave_type" domain="[('is_public','=',True)]" options="{'no_create':True}"/>
+                            <field name="reason"/>
+                            <field name="date_from"/>
+                            <field name="date_to"/>
+                            <field name="holiday_id" invisible="1"/>
+                            <field name="is_leave" invisible="1"/>
+                            <button name="create_leave" type="object" string="Approve" attrs="{'invisible':[('is_leave','=',True)]}"/>
+                        </tree>
+                    </field>
+                </xpath>
+                <xpath expr="//field[@name='global_leave_ids']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+            </field>
+        </record>
+
+         <menuitem id="attendace_menu_setting" name="Setting" parent="hr_attendance.menu_hr_attendance_root" sequence="80"/>
+        <menuitem id="attendace_menu_working_time" name="Working Schedule" parent="attendace_menu_setting" action="resource.action_resource_calendar_form" sequence="1"/>
+    </data>
+</odoo>

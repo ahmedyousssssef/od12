@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!--************************* Form View *************************-->
+
+        <record id="hr_attendance_deduction_form" model="ir.ui.view">
+            <field name="name">hr.attendance.deduction.form</field>
+            <field name="model">hr.attendance.deduction</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <group style="width:60%">
+                            <field name="code" style="width:60%"/>
+                            <field name="hour_level" style="width:60%" attrs="{'invisible': [('type', '=', 'absent' )]}"/>
+                            <field name="type"/>
+                            <label string="Duration" for="time_from" attrs="{'invisible': [('type', '=', 'absent' )]}"/>
+                            <div class="o_row" attrs="{'invisible': [('type', '=', 'absent' )]}">
+                                <span class="oe_form_field"> from </span>
+                                <field name="time_from" widget="float_time"/>
+                                <span class="oe_form_field"> to </span>
+                                <field name="time_to" widget="float_time"/>
+                            </div>
+                            <field name="repetition" attrs="{'invisible': [('type', '=', 'absent' )]}"/>
+                            <field name="absent_repeat" attrs="{'invisible': [('type', '!=', 'absent' )]}"/>
+                            <label string="Deduction (Hours)" for="deduction" />
+                            <div class="o_row">
+                                <field name="deduction"  attrs="{'readonly': [('warning', '=', True)]}"/>
+                                <span class="oe_form_field"> or Warning </span>
+                                <field name="warning"  attrs="{'readonly': [('deduction', '>', 0)]}"/>
+                                <!--<span class="oe_form_field" attrs="{'invisible': [('type', '=', 'absent' )]}"> or Absent </span>-->
+                                <!--<field name="absent"  attrs="{'readonly': ['|',('deduction', '>', 0),('warning', '=', True)],'invisible': [('type', '=', 'absent' )]}"/>-->
+                            </div>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <!--************************* Tree View *************************-->
+
+        <record id="hr_attendance_deduction_tree" model="ir.ui.view">
+            <field name="name">hr.attendance.deduction.tree</field>
+            <field name="model">hr.attendance.deduction</field>
+            <field name="arch" type="xml">
+                <tree string="Attendance Deduction" default_order="type,hour_level,repetition asc">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="hour_level"/>
+                    <field name="type"/>
+                    <field name="time_from" widget="float_time"/>
+                    <field name="time_to" widget="float_time"/>
+                    <field name="repetition"/>
+                    <field name="deduction"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--************************* Window Action *************************-->
+
+        <record id="hr_attendance_deduction_action" model="ir.actions.act_window">
+            <field name="name">Attendance Deduction</field>
+            <field name="res_model">hr.attendance.deduction</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    This rules will be applied on all employees
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="hr_attendance_deduction_menu" name="Attendance Deduction" parent="gm_hr_custom.attendace_menu_setting"
+                  action="hr_attendance_deduction_action" sequence="3"/>
+
+
+
+    </data>
+</odoo>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+        <record id="weekend_days_000" model="weekend.days">
+            <field name="dayofweek">Monday</field>
+        </record>
+        <record id="weekend_days_001" model="weekend.days">
+            <field name="dayofweek">Tuesday</field>
+        </record>
+        <record id="weekend_days_002" model="weekend.days">
+            <field name="dayofweek">Wednesday</field>
+        </record>
+        <record id="weekend_days_003" model="weekend.days">
+            <field name="dayofweek">Thursday</field>
+        </record>
+        <record id="weekend_days_004" model="weekend.days">
+            <field name="dayofweek">Friday</field>
+        </record>
+        <record id="weekend_days_005" model="weekend.days">
+            <field name="dayofweek">Saturday</field>
+        </record>
+        <record id="weekend_days_006" model="weekend.days">
+            <field name="dayofweek">Sunday</field>
+        </record>
+
+        <!--<record id="hr_attend_rule_overtime" model="hr.salary.rule">-->
+            <!--<field name="name">Overtime</field>-->
+            <!--<field name="sequence" eval="20"/>-->
+            <!--<field name="code">OVT</field>-->
+            <!--<field name="category_id" ref="hr_payroll.DED"/>-->
+            <!--<field name="condition_select">python</field>-->
+            <!--<field name="condition_python">result=bool(payslip.overtime_amount)</field>-->
+            <!--<field name="amount_select">code</field>-->
+            <!--<field name="amount_python_compute">result = ((BASIC/30) * payslip.overtime_amount)-->
+            <!--</field>-->
+        <!--</record>-->
+        <!--<record id="hr_attend_rule_ded" model="hr.salary.rule">-->
+            <!--<field name="name">Deduction</field>-->
+            <!--<field name="sequence" eval="50"/>-->
+            <!--<field name="code">DED</field>-->
+            <!--<field name="category_id" ref="hr_payroll.DED"/>-->
+            <!--<field name="condition_select">python</field>-->
+            <!--<field name="condition_python">result=bool(payslip.deduction_amount)</field>-->
+            <!--<field name="amount_select">code</field>-->
+            <!--<field name="amount_python_compute">result = -((BASIC/30) * payslip.deduction_amount)-->
+            <!--</field>-->
+        <!--</record>-->
+
+        <!--<record id="hr_attend_rule_abs" model="hr.salary.rule">-->
+            <!--<field name="name">Absence</field>-->
+            <!--<field name="sequence" eval="50"/>-->
+            <!--<field name="code">ABS</field>-->
+            <!--<field name="category_id" ref="hr_payroll.DED"/>-->
+            <!--<field name="condition_select">python</field>-->
+            <!--<field name="condition_python">result=bool(payslip.absent_amount)</field>-->
+            <!--<field name="amount_select">code</field>-->
+            <!--<field name="amount_python_compute">result = -((GROSS/30) * payslip.absent_amount)-->
+            <!--</field>-->
+        <!--</record>-->
+
+    </data>
+</openerp>

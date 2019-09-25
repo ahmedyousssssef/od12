@@ -1,0 +1,42 @@
+<odoo>
+    <data>
+        <!-- Inherit Form View to Modify it -->
+        <record id="view_hr_payslip_form_inherit_002" model="ir.ui.view">
+            <field name="name">hr.payslip.form.inherit</field>
+            <field name="model">hr.payslip</field>
+            <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group//field[@name='credit_note']" position="after">
+                    <field name="is_refund" invisible="1"/>
+                </xpath>
+
+                <xpath expr="//notebook//page[1]" position="after">
+                    <page string="Attendance Rules" groups="hr_payroll.group_hr_payroll_manager">
+                        <group col="4">
+                            <field name="attend_date_from"/>
+                            <field name="attend_date_to"/>
+                        </group>
+                        <group col="7">
+                            <field name="deduction_amount" readonly="1"/>
+                            <field name="overtime_amount" readonly="1"/>
+                            <field name="absent_amount" readonly="1"/>
+                            <button name="get_attendance_lines" type="object" string="Compute" class="oe_highlight"
+                                    attrs="{'invisible':[('state','!=','draft')]}"/>
+                        </group>
+                        <field name="attend_rule_ids" colspan="4" nolabel="1">
+                            <tree editable="bottom">
+                                <field name="name" readonly="1"/>
+                                <field name="code" readonly="1"/>
+                                <field name="num_of_days" readonly="1"/>
+                                <field name="num_of_hours" readonly="1"/>
+                                <field name="pay_amount"/>
+                                <field name="rule_id" invisible="1"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>

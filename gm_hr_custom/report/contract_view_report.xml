@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="hr_contract_print_report">
+        <t t-call="report.html_container">
+            <t t-foreach="docs" t-as="o">
+                <!--<t t-call="report.internal_layout">-->
+                <t t-call="report.external_layout">
+                    <div class="page">
+                        <table class="table table-condensed" style="border:1px solid black">
+                            <body>
+                                <tr>
+                                    <td class="text-left" style="border:1px solid black;">This Agreement (the
+                                        “Agreement”)
+                                        is made this Contract creation <span t-field="o.date_start"/> day <span t-field="o.date_start"  t-field-options='{"format": "DD"}'/> (the “Date of Signature”) by and
+                                        between:
+
+                                        1) Polaris for Project Management , a company organized and existing under the
+                                        laws
+                                        of Egypt, and located at plot 45 1st area – developers – North Extension 6th of
+                                        October Giza ; and represented in the signing of this Agreement Mr. Mohammed
+                                        Kassem
+                                        in his capacity as Chairman , (hereinafter referred to as “Employer”);
+
+                                        2) Mr. employee name Egyptian, National ID No. id number with an address at
+                                        address
+                                        (referred to as "Employee").
+                                    </td>
+                                    <td class="text-right" style="border:1px solid black">حُرر هذا العقد )"العقد") يوم
+                                        تاريخ
+                                        العقد الــمـــوافــــــــق اسم اليوم تــــاريـــــــخ الـــتــوقـــــيــــع")
+                                        بــــيــــــــن كــل من:
+
+                                        1 - شركة بـــــولاريس لادارة الـــــمــشـــــروعـــات ، شــــركـــة
+                                        مؤســــــســـــة
+                                        وخـــــاضعـــــة لأحـــــكــام الـــــــقـــانـــون المــصري، وكائـنــــــــة
+                                        فـــــــــي الـــــــــــــقـطـعة 45 المــــــنـطــــــقـــــة الاولى بالمطورين
+                                        –
+                                        التوسعات الشمالية 6 اكتوبر، الجيزة، ويمثلها في التـــــــــوقيع على هذا العقد
+                                        السيد/
+                                        محمد قاسم رئيس مجلس ادارة الشـــــركة ، (ويــــشار إلـيـــــــــــــه فيما يلي
+                                        بــ
+                                        "رب العمل")؛
+
+                                        2 – السيد / اسم الموظف بطاقة رقم قومى رقم / رقم البطاقة الموجود داخل بياناته
+                                        والمقيم
+                                        فى عنوانه ويـــشار إليه فيما يلي بــ "الموظف").
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left" style="border:1px solid black;">Whereas, The Employer is an
+                                        international company that works in development of industrial parks, projects
+                                        management, and wishes to hire the Employee;
+
+                                        Whereas, The Employee desires to work for the Employer and obtains the necessary
+                                        qualifications for performing the duties specified by the Employer ; and
+                                        Now therefore, both Parties declare their legal capacity to contract and agree
+                                        as
+                                        follows:
+                                    </td>
+                                    <td class="text-right" style="border:1px solid black">حيث أن رب العمل شركة عالمية
+                                        تعمل
+                                        في مجال تنمية المناطق الصناعية وإدارة المشروعات وترغب في تعيين الموظف للعمل
+                                        لديها؛
+
+                                        وحيث أن الموظف يرغب في العمل لدى صاحب العمل ولديه الخبرات اللازمة لأداء المهام
+                                        المُكلف بها من جانب صاحب العمل ؛ وعليه ، وحيث أن الاطراف أقرا بأهليتهما
+                                        القانونية
+                                        للتعاقد وقد إتفقا على ما يلي:
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left" style="border:1px solid black;">Article )1(
+                                        1.1 The foregoing Preamble, Annexes hereto, Employer's regulations and any other
+                                        decrees issued by the Employer in accordance with applicable laws, all
+                                        considered as
+                                        an integral part of this Agreement
+
+                                        1.2 This Agreement prevails to any other executed contracts or exchanged
+                                        correspondences between the Parties prior to this Agreement.
+                                    </td>
+                                    <td class="text-right" style="border:1px solid black">المادة (1)
+                                        1.1 يعتبر التمهيد السابق وملاحق هذا العقد وكذلك لوائح العمل الخاصة بصاحب العمل
+                                        وأية
+                                        قرارات أخرى يصدرها صاحب العمل وفقا لأحكام القانون جزء لا يتجزأ من هذا العقد.
+
+                                        2.1 يسود هذا العقد كافة العقود الموقعة و المراسلات المتبادلة بين الأطراف قبل
+                                        إبرام
+                                        هذا العقد.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left" style="border:1px solid black;">Article )2(
+                                        2.1 The term of this Agreement shall be starting from duration start date and
+                                        ending
+                                        at duration end date
+                                    </td>
+                                    <td class="text-right" style="border:1px solid black">المادة (2)
+                                        2-1 مـــدة هذا العقد تبدأ من بداية مدة العقد وتنتــــــهي في نهاية العقد
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left" style="border:1px solid black;">2.2 This Agreement shall
+                                        terminate
+                                        after lapse of its term. In case the Employer does not desire to renew this
+                                        Agreement, the Employer shall inform the Employee one (1) month before the
+                                        expiry of
+                                        this Agreement. The Employer may require amending any of the terms of the
+                                        renewed
+                                        Agreement or executing new agreement(s) for other renewed terms.
+                                    </td>
+                                    <td class="text-right" style="border:1px solid black">2-2 ينتهي هذا العقد بإنتهاء
+                                        مدته،
+                                        وفي حالة عدم رغبة صاحب العمل في تجديد هذا العقد وجب عليه ان يخطر الموظف بذلك قبل
+                                        نهاية هذا العقد بشهر علي الأقل. كما يحق لصاحب العمل ان يعدل اى بند من بنود العقد
+                                        المجدد، او ابرام عقد (عقود) جديدة لمدد اخرى.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left" style="border:1px solid black;">2.3 The Employer has the right
+                                        to
+                                        terminate this Agreement without any rights to the Employee to claim
+                                        compensation
+                                        for non-renewal.
+                                    </td>
+                                    <td class="text-right" style="border:1px solid black">2- 3يحق لصاحب العمل عدم تجديد
+                                        العقد دون إى حقوق للعامل فى المطالبة بالتعويض عن عدم التجديد.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left" style="border:1px solid black;">2.4The Parties agree that the
+                                        terms and provisions of this Agreement shall not be in force except from the
+                                        Effective Date referred to under Article (5.1).
+                                    </td>
+                                    <td class="text-right" style="border:1px solid black">2-4إتفق الاطراف على أن أحكام
+                                        وبنود
+                                        هذا العقد لن تسري إلا من تاريخ السريان المحدد فى المادة (5-1) .
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left" style="border:1px solid black;">Article )3(
+                                        3.1 The Employer appoints the Employee, who hereby accepts such appointment as
+                                        job
+                                        title
+                                        3.2 The scope of work shall be determined by the Employer and to be changed from
+                                        time to time as per work requirements.
+                                        3.3 In all cases, the Employee shall exert his best endeavors and shall perform
+                                        the
+                                        work in a manner satisfactory to the Employer.
+                                        3.4 The Employee shall comply with the internal regulations issued by the
+                                        Employer
+                                        from time to time.
+                                    </td>
+                                    <td class="text-right" style="border:1px solid black">المادة (3)
+                                        3-1 يعين صاحب العمل الموظف – القــابل لذلك – بوظيـــــفة اسم الوظيفة
+                                        3-2 يحدد صاحب العمل نطاق العمل الذي يمكن ان يتغير من وقت لآخر وفقاً لمتطلبات
+                                        العمل.
+                                        3-3 وفى كل الأحوال فعلى الموظف أن يبذل فى عمله أقصى جهد وأن يؤديه على نحو مرضى
+                                        لصاحب
+                                        العمل.
+                                        3-4 يلتزم الموظف باتباع اللوائح الداخلية التى يصدرها صاحب العمل من وقت لآخر.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left" style="border:1px solid black;">
+                                        Article (4)
+                                        4.1 The Employer shall pay the Employee in consideration for carrying out the
+                                        obligation of his post, a monthly Net salary of EGP wage “net salary” (Only
+                                        number
+                                        with text Egyptian pounds).
+                                        4.2 The Employee's salary shall include all increments prescribed by law,
+                                        including
+                                        the high living cost increments calculated on the basis of the highest
+                                        percentage
+                                        specified by law and health insurance coverage.
+                                        4.3 The Employer shall pay the Employee's monthly salary and any outstanding
+                                        amounts, which may be due to him in Egyptian pounds.
+                                        4.4 Payment shall be effected during the first Five (5) days of each month after
+                                        deducting the taxes and social insurance incurred under the law and any other
+                                        payable dues in accordance with the Laws.
+                                    </td>
+                                    <td class="text-right" style="border:1px solid black">
+                                        المادة (4)
+                                        4-1 يدفع صاحب العمل للموظف مقابل قيامه بالتزامات وظيفته راتبا شهرياً صافي قدره
+                                        المرتب المتفق عليه جم (فقط التفقيط جنيه مصرى لا غير) .
+                                        4-2 يتضمن أجر الموظف جميع العلاوات المقررة قانونا بما فى ذلك علاوة غلاء المعيشة
+                                        محسوبة على اساس أقصى النسب المحددة قانوناً، وتغطية شاملة للتأمين الصحى.
+
+                                        4-3يدفع صاحب العمل أجر الموظف الشهرى وأى مستحقات له بالجنيه المصري.
+
+                                        4-4 يتقاضى الموظف راتبه فى خلال الايام الخمسة (5) الأولى من كل شهر وذلك بعد خصم
+                                        الضرائب والتأمينات الاجتماعية المستحقة قانوناً، وأى ديون مستحقة الأداء فى الحدود
+                                        المنصوص عليها قانونا .
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left" style="border:1px solid black;">Article )5(
+
+                                        5.1 The Employee shall, within thirty (30) days from the Date of Signature of
+                                        this
+                                        Agreement, submit the documents and certificates of his appointment (the
+                                        “Effective
+                                        Date”) as required under the Labor Law.
+
+                                        5.2 The Employee acknowledges the validity and authenticity of information and
+                                        documents supplied by him/her to the Employer. Any false information or invalid
+                                        document shall lead directly to the termination of this Agreement without any
+                                        notices or taking any judicial actions without any rights for the Employee to
+                                        claim
+                                        for any indemnifications or bonus of whatsoever kind.
+
+                                    </td>
+                                    <td class="text-right" style="border:1px solid black">المادة (5)
+
+                                        5-1 يلتزم ا لموظف خلال ثلاثين (30) يوما من تاريخ التوقيع بتسليم المستندات
+                                        المطلوبة
+                                        منه ومسوغات التعيين ("تاريخ السريان")، كما هو مطلوب وفقا لقانون العمل.
+                                        5-2 يقر الموظف بصحة ومصداقية البيانات والمستندات المُقدمة لصاحب العمل، ويترتب
+                                        علي
+                                        الإدلاء بأية بيانات مخالفة للحقيقة أو تقديم أي مستندات غير صحيحة اعتبار العقد
+                                        مفسوخاً من تلقاء نفسه دون إخطار أو إنذار أو اتخاذ أى اجراء قضائى ولا يحق للموظف
+                                        طلب
+                                        أي تعويض أو مكافأة من أي نوع.
+
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left" style="border:1px solid black;">Article (6)
+
+                                        A probation period of three (3) months starting at the Effective Date of this
+                                        Agreement is agreed upon between the parties. During such probation period the
+                                        Employer is entitled to terminate this Agreement without any notice or judicial
+                                        order. The Employee acknowledges that he has no indemnification or end of
+                                        service
+                                        compensation or any type of bonus until the end of probation period.
+                                    </td>
+                                    <td class="text-right" style="border:1px solid black">المادة (6)
+
+
+                                        اتفق الأطراف على أن تكون هناك فترة اختبار لمدة ثلاثة (3) أشهر تبدأ من تاريخ
+                                        سريان
+                                        هذا العقد. ولرب العمل وحده الحق في إنهاء هذا العقد خلال مدة الاختبار دون أخطار
+                                        او
+                                        امر قضائي ولا يحق للموظف أي تعويض او نوع من أنواع مكافأة نهاية الخدمة حتى انتهاء
+                                        مدة
+                                        الأختبار.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left" style="border:1px solid black;">
+                                        Article(7(
+
+                                        7.1 The Employee agrees to work at any place in Arab Republic of Egypt
+                                        determined by
+                                        the Employer for performing his scope of work as required by the Employer,
+                                        either
+                                        temporarily or permanently, in positions determined by the Employer which shall
+                                        be
+                                        in same degree and salary of the Employee’s current position without any rights
+                                        to
+                                        the Employee that may be incurred for the performance of the scope of work.
+                                        7.2 The Employer may require from the Employee to work outside Egypt as
+                                        determined
+                                        by the Employer for work purposes.
+                                        And requirements without any rights to the Employee that may be incurred with
+                                        respect of required remuneration in this respect.
+                                        7.3 The Employee agrees that the Employer has the right to assign to the
+                                        Employee
+                                        any other work or job which shall fall under same qualifications of the Employee
+                                        or
+                                        training experiences gained by the Employer.
+                                    </td>
+                                    <td class="text-right" style="border:1px solid black">
+                                        المادة (7)
+
+                                        7-1وافق الموظف على العمل في أي مكان يحدده صاحب العمل داخل جمهورية مصر العربية
+                                        للقيام
+                                        بنطاق العمل سواء بصفة مؤقتة أو دائمه وفقاً لإحتياجات صاحب العمل وذلك في وظيفة
+                                        يحددها
+                                        صاحب العمل بنفس المرتب والدرجة التي يعمل بها الموظف حالياً، وذلك دون أى حقوق
+                                        تترتب
+                                        للعامل بشأن أى بدلات تُصرف له لأغراض تنفيذ نطاق العمل.
+                                        7-2 يحق لصاحب العمل أن يطلب من الموظف العمل خارج جمهورية مصر العربية وفقاً لحاجة
+                                        ومقتضيات العمل التي يحددها صاحب العمل،
+                                        وذلك دون أى حقوق تترتب للعامل بشأن أى بدلات تصرف له فى هذا الشأن.
+
+                                        7-3 وافق الموظف على أن لصاحب العمل الحق في أن يطلب منه القيام بأي عمل أخر مما
+                                        يقع في
+                                        نطاق مؤهلاته أو الخبرة التي إكتسبها من تدريب صاحب العمل له.
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left" style="border:1px solid black;">Article (8(
+                                        8.1 The Employee undertakes to perform the work assigned to him in person and to
+                                        devote all his time and attention to undertake work assigned to him as
+                                        determined by
+                                        the Employer.
+                                        8.2 The Employee agrees that the Employer may modify at any time the working
+                                        days
+                                        and hours determined in its internal regulations provided that such modified
+                                        days
+                                        and hours do not exceed the maximum working days and hours determined under the
+                                        Labor Law.
+                                        8.3 The Employer shall determine the Employee’s annual vacation and other
+                                        vacations
+                                        according to the work requirements and circumstances. In case the Employee does
+                                        not
+                                        submit a written request to take any of his vacations in the dates specified by
+                                        the
+                                        Employer during the year, the Employee shall not claim for its consideration
+                                        unless
+                                        otherwise the Employer refuses in writing such vacation.
+                                    </td>
+                                    <td class="text-right" style="border:1px solid black">المادة(8)
+                                        8-1 يتعهد الموظف بأن يؤدي العمل المكلف به بنفسه وبأن يكرس كل وقته وإهتمامه
+                                        للقيام
+                                        بالاعمال الموكله إليه لدى صاحب العمل طبقاً لما يحدده صاحب العمل.
+                                        8-2 وافق الموظف على أن لصاحب العمل الحق في تعديل أيام وساعات العمل المحددة في
+                                        اللوائح الداخلية في أي وقت طالما كانت الأيام والساعات المعدلة لا تتجاوز الحد
+                                        الأقصى
+                                        لساعات العمل المحدد في قانون العمل.
+                                        8-3يحدد صاحب العمل مواعيد الأجازة السنوية والأجازات الاخرى للموظف حسب مقتضيات
+                                        العمل
+                                        وظروفه، وإذا لم يتقدم الموظف بطلب كتابى للقيام بأى من أجازاته المُستحقة له خلال
+                                        السنة فى المواعيد المحددة من قبل صاحب العمل، فلا يجوز له المطالبة باى مقابل مادى
+                                        لها
+                                        ما لم يكن صاحب العمل قد رفض كتابةً قيامه بالأجازة لدواعى العمل.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left" style="border:1px solid black;">Article (9)
+                                        The Employer may require the Employee to enroll in a training course(s) to
+                                        enhance
+                                        his level of scientific or practical qualifications, or to qualify him to do
+                                        certain
+                                        work inside Arab Republic of Egypt or abroad. In such case, the Employee is
+                                        committed to continue at his work for the Employer for one (1) year starting
+                                        from
+                                        the end of training period. Such one (1) year period may be increased by the
+                                        Employer according to work requirements. If the Employee does not work for a
+                                        year
+                                        following the end of the training period, the Employee shall pay all expenses of
+                                        training as incurred by the Employer. Further, the Employer is entitled to claim
+                                        indemnification for losses incurred due to the Employee’s termination.
+                                    </td>
+                                    <td class="text-right" style="border:1px solid black">المادة (9)
+                                        يحق لصاحب العمل ان يطلب من الموظف ان يلتحق بدورة (دورات) تدريبية للنهوض بمؤهلاته
+                                        العلمية أو العملية أو لتأهيله للقيام بعمل معين فى داخل أو خارج جمهورية مصر
+                                        العربية.
+                                        في هذه الحالة يلتزم الموظف بالإستمرار فى العمل لدي صاحب العمل لمدة سنة لاحقة على
+                                        إنتهاء فترة التدريب الذي قام به صاحب العمل. ويجوز زيادة مدة السنة بإخطار من صاحب
+                                        العمل حسب مقتضيات العمل. وإذا لم يعمل الموظف لمدة سنة تبدأ من إنتهاء فترة
+                                        التدريب،أصبح ملزماً بدفع تكاليف التدريب التي تحملها صاحب العمل، ويحق لصاحب العمل
+                                        مطالبته بالتعويض عما لحقه من خسارة بسبب إنهاء العقد من جانب الموظف.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left" style="border:1px solid black;">Article (10)
+
+                                        10.1 The Employee shall keep confidentiality of all information, knowledge or
+                                        data
+                                        pertaining to the Employer's scope of work and the Employer’s information given
+                                        to
+                                        the Employee during his employment term for purposes of work performance.
+
+
+                                        10.2 The Employee agrees not to use or to disclose directly or indirectly such
+                                        information, knowledge or data given to him for reasons of his work to any
+                                        person or
+                                        entity.
+                                        10.3 Provisions of this Article shall remain in full force for (5) five years
+                                        after
+                                        termination or expiration of this Agreement for any reason.
+                                        10.4Any infringement to the provisions of this Article shall be considered a
+                                        legal
+                                        reason for immediate termination of this Agreement without any notice or taking
+                                        any
+                                        judicial action, and with rights to the Employee in such case.
+                                        10.5The Employee shall be responsible for all direct and indirect damages and/or
+                                        loss resulting from any disclosure or use of confidential information during the
+                                        term of this Agreement or after its termination.
+                                    </td>
+                                    <td class="text-right" style="border:1px solid black">المادة (10)
+
+                                        10-1 يتعهد الموظــف بالمحافظـــة علي سرية المعلومات اوالمعرفة اوالبـيانات
+                                        المتعــلقة
+                                        بنطاق العمل والمعلومات الخاصة بصاحب العمل والتي يحصـل عليها الموظـف خلال مدة
+                                        عـمــله
+                                        بسبب أو بمناسبة تأدية عمله.
+
+                                        10-2 يلتزم الموظف بعدم استخدام أو إفشاء هذه المعلومات والمعرفة والبيانات المعطاه
+                                        له
+                                        بمناسبة عمله، سواء بطريق مباشر أو غير مباشر الى أى شخص او جهة.
+                                        10-3 تظل أحكام هذه المادة سارية لمدة خمس (5) سنوات بعد إنقضاء علاقة العمل لأي
+                                        سبب من
+                                        الأسباب.
+                                        10-4 يعتبر أي إخلال بأحكام هذه المادة سبباً مشروعاً للإنهاء الفوري لهذا العقد
+                                        بدون
+                                        أي إخطار أو اتخاذ اى اجراء قضائى، وذلك بدون أى حقوق للعامل فى هذه الحالة.
+                                        10-5يعتبرالموظف مسئولاً عن كافة الأضرار المباشرة والغير مباشرة الناتجة عن أي
+                                        إفشاء
+                                        أو استخدام للمعلومات السرية خلال مدة العقد أو حتى بعد انتهائه.
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left" style="border:1px solid black;">Article (11)
+
+                                        11.1 The Employee shall, at all times, respect the integrity of his position and
+                                        observe good conduct, appearance, behavior and reputation.
+                                        11.2 During the term hereof, the Employee shall devote his time and attention to
+                                        his
+                                        duties and shall exert his best endeavors to promote, develop and extend the
+                                        business of the Employer.
+                                        11.3 The Employee shall not, without written authorization from the Employer,
+                                        engage
+                                        in any work for a third party which is compete, perform similar business or have
+                                        a
+                                        business relationship with the Employer with or without remuneration even
+                                        outside
+                                        official working hours, provisions of this Article shall remain in full force
+                                        for
+                                        (3) three years after termination or expiration of this Agreement for any
+                                        reason.
+                                        11.4The Employee shall not directly or indirectly engage in, or have an interest
+                                        in
+                                        other entity of whatsoever kind which competes with the Employer or working in
+                                        same
+                                        field, without prior written approval by the Employer.
+                                        11.5 The Employee shall be bound to notify the Employer in the event of any
+                                        conflict
+                                        arising between the Employer’s interests and the Employee's personal interest.
+                                        The
+                                        Employee shall also notify the Employer of any property, interest or personal
+                                        connections that may affect his performance and integrity at work.
+
+
+                                        11.6 The Employee shall act in a respectful manner with the Employer’s
+                                        customers,
+                                        clients, suppliers and/or any party dealing with the Employer.
+                                        11.7The Employee shall refrain from undertaking any of the following, except
+                                        after
+                                        the written approval of the Employer:
+                                        a) Compete with the Employer either directly or indirectly.
+                                        b) Serve as director, officer, or consultant with other entity or person.
+                                        c) Usurp for him or divert to another person a business opportunity that belongs
+                                        to,
+                                        has been developed by or is available to the Employer or for which it has been
+                                        negotiating.
+                                        d) Perform any business related to the business and activities of the Employer,
+                                        and
+                                        the articles of incorporation and the commercial registry of the Employer
+                                        whether
+                                        directly or through third parties.
+                                        e) Refrain from accepting any sums, commissions, fees, or cash or in kind gifts
+                                        from
+                                        clients and/or sellers or suppliers of goods and services working with the
+                                        Employer.
+                                        11.8 The Employee shall be fully responsible for all of his works and acts
+                                        towards
+                                        third party, whether those arising out of this Agreement or arising out of any
+                                        other
+                                        source of commitment outside this Agreement.
+                                        11.9 The Employee acknowledges that he is aware of all applicable laws and
+                                        regulations in the Arab Republic of Egypt and he shall not act in violation to
+                                        such
+                                        applicable laws and regulations. The Employee agrees that he shall have full
+                                        responsibility if he takes any action against the laws
+
+                                    </td>
+                                    <td class="text-right" style="border:1px solid black">المادة (11)
+
+                                        11-1 يتعهد الموظف بالمحافظة في كل الأوقات على سلوك الوظيفة وأن يراعي في كل
+                                        الأوقات
+                                        التصرف والسلوك والمظهر والسمعة الحسنة.
+                                        11-2 يتعهد الموظف خلال مدة سريان هذا العقد بأن يكرس وقته وإهتمامه لواجباته وبأن
+                                        يقوم
+                                        بكل ما في وسعه في سبيل تسويق وتنمية وتوسعة نشاط صاحب العمل.
+                                        11-3يحظرعلى الموظف بدون إذن كتابي من صاحب العمل أن يقوم بأي عمل لجهة أخرى منافسة
+                                        أو
+                                        تقوم بأى عمل مماثل لعمل الشركة أو لها علاقة عمل بأى شكل بصاحب العمل، سواء بمقابل
+                                        أو
+                                        بدون مقابل ولو كان ذلك خارج ساعات العمل الرسمية وتظل أحكام هذه المادة سارية لمدة
+                                        ثلاث (3) سنوات بعد إنقضاء علاقة العمل لأي سبب من الأسباب.
+
+                                        11-4يمتنع على الموظف أن يكون له بطريــق مباشر أو غير مباشر أية صلة بأي منـــشأة
+                                        أخرى
+                                        تكون منافسة لصاحب العمل او تعمل فى ذات المجال أياً كانت بدون إذن كــــتابي مسبق
+                                        من
+                                        صاحب العمل.
+
+                                        11-5يلتزم الموظف بأن يخطر صاحب العمل فورا كلما حدث تعارض بين مصالح صاحب العمل
+                                        وبين
+                                        مصالحه الشخصية وأن يطلع صاحب العمل على أى ملكية أو مصالح أو علاقات خاصة قد تؤثر
+                                        على
+                                        مقدرته فى القيام بمهام عمله بنزاهة.
+
+                                        11-6 يلتزم الموظف بأن يحسن معاملة العملاء والزبائن والموردين وكافة من يتعاملون
+                                        مع
+                                        صاحب العمل.
+                                        11-7 يلتزم الموظـــف بالامتناع عن القيام بأى من الاعمال التالية إلا بإذن كتابي
+                                        من
+                                        صاحب العمل:
+                                        أ. – منافسة صاحب العمل سواء بطريق مباشر أو غير مباشر.
+
+                                        ب. العمل كمدير أو موظف أو إستشاري لدى أى جهة أخرى او شخص اخر.
+                                        ج. أن يأخذ لنفسه أو يحول لشخص آخر فرصة سانحة مملوكة لصاحب العمل أو قام صاحب
+                                        العمل
+                                        بإعدادها أو كانت متوفرة له أو تفاوض صاحب العمل للحصول عليها.
+
+                                        د. القيام بأية أعمال مرتبطة بالأعمال والانشطة التى يقوم بها صاحب العمل،ونظام
+                                        الشركة
+                                        الاساسى وسجلها التجارى، سواء مباشرة او عن طريق تسخير الغير.
+
+                                        ه. قبول أي مبلغ أو عمولة أوأتعاب أو أية مبالغ او هدايا عينية او نقدية من أى من
+                                        عملاء
+                                        أوموردي المهمات والخدمات العاملين مع صاحب العمل.
+
+                                        11-8 يعتبر الموظف مسئول مسئولية كاملة عن كافة أعماله و افعاله في مواجهة الغير
+                                        سواء
+                                        تلك الناشئة عن هذا العقد أو تلك الخارجة عن هذا العقد.
+
+                                        11-9 يقر الموظف بأنه على علم بجميع القوانين واللوائح المعمول بها داخل جمهورية
+                                        مصر
+                                        العربية و بأن لا يرتكب اي عمل ينطوي علي مخالفه لأي من هذه القوانين واللوائح.
+                                        كما يتعهد الموظف بتحمله المسئولية في حالة قيامه بأي عمل ينطوي علي مخالفة لأي من
+                                        هذه
+                                        القوانين.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left" style="border:1px solid black;">Article )12(
+                                        12.1 Upon end of term or termination of this Agreement for any reason
+                                        whatsoever,
+                                        the Employee shall immediately deliver back to the Employer whatever has been
+                                        consigned to him during his employment period as goods, materials, movables,
+                                        documents, paper or whatever related to the Employer.
+
+                                        12.2 In case of occurrence of any of the following, the Employer may terminate
+                                        this
+                                        Agreement by virtue of warning notice of (15) fifteen days prior to date of
+                                        required
+                                        date of termination without any rights or compensation to the Employee any of
+                                        the
+                                        following:
+                                        a. Material violation to any of the works assigned to the Employee;
+                                        b. Commitment of any of the acts described under article (69) of the Labor Law;
+                                        c. Proof of commitment by evidence of a material breach related to his
+                                        obligations
+                                        under this Agreement;
+                                        d. Commitment of any act that may or cause damage to the interests of the
+                                        Employer.
+
+                                        12.3 The Parties agree that the Agreement shall be considered terminated by
+                                        itself
+                                        without any notification, notice or litigation, in the event of liquidation or
+                                        bankruptcy procedures of the Employer or partial cease of the work of the
+                                        Employer.
+                                    </td>
+                                    <td class="text-right" style="border:1px solid black">المادة (12)
+                                        12-1 يتعهد الموظف عند إنقضاء علاقة العمل لأي سبب بأن يعيد لصاحب العمل فوراً كل
+                                        ما
+                                        سلم إليه خلال مدة عمله من ادوات أو مهمات أو منقولات أو مستندات أو أوراق أو غيرها
+                                        مما
+                                        قد يكون خاصاً بصاحب العمل.
+
+                                        12-2فى حالة حدوث اى مما يلى، يحق لصاحب العمل انهاء هذا العقد بعد انذار الموظف
+                                        بــ 15
+                                        (خمسة عشر) يوماً قبل تاريخ الانهاء، دون ان يكون للعامل الحق فى اى حقوق او
+                                        تعويضات:
+
+                                        أ. إخلال الموظف الجسيم بأى من الأعمال الموكلة للموظف،
+
+                                        ب. ارتكاب الموظف لأى من الأفعال الواردة بالمادة 69 من قانون العمل،
+                                        ج. ثبوت ارتكاب الموظف لاى مخالفة جسيمة لالتزاماته فى هذا العقد،
+
+                                        د. ارتكاب الموظف او شروعه فى ارتكاب اى فعل من شأنه الاضرار بمصلحة صاحب العمل.
+
+                                        12-3 أتفق الاطراف على اعتبار هذا العقد مفسوخاً من تلقاء نفسه دون ادنى اخطار أو
+                                        إنذار
+                                        أواللجوء للقضاء فى حالة البدء فى اجراءات تصفية او إفلاس او وقف جزئى لاعمال صاحب
+                                        العمل.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left" style="border:1px solid black;">Article (13(
+
+                                        The Egyptian law shall be the governing law of this Agreement.Any dispute which
+                                        may
+                                        arise out of, in connection with, in relation to or as result of the execution,
+                                        interpretation or termination of this Agreement shall be within the jurisdiction
+                                        of
+                                        Egypt Courts.
+                                    </td>
+                                    <td class="text-right" style="border:1px solid black">المادة (13)
+
+                                        القانون المصري هو القانون واجب التطبيق على هذا العقد.تختص محاكم جمهورية مصر
+                                        العربية
+                                        بنظر أي نزاع يتعلق بتنفيذ أو تفسير أو إنهاء هذا العقد.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left" style="border:1px solid black;">Article (14(
+
+                                        The Agreement is concluded according to the Labor Law and Any amendments to the
+                                        Labor Law shall require amendment to this Agreement by both Parties.
+                                    </td>
+                                    <td class="text-right" style="border:1px solid black">المادة (14)
+
+                                        أبُرم هذا العقد وفقا لقانون العمل وفي حالة تعديل قانون العمل يجب علي الاطراف
+                                        تعديل
+                                        هذا العقد.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left" style="border:1px solid black;">Article (15)
+
+                                        All notices by either party to the other shall be made to the respective
+                                        addresses
+                                        shown herein. Such notices shall be deemed duly served and legally effective.
+                                        The
+                                        Employee undertakes to notify the Employer in writing of any change of his
+                                        address
+                                        and the date of such change.
+                                    </td>
+                                    <td class="text-right" style="border:1px solid black">المادة (15)
+
+                                        كل إخطار أو إعلان يوجهه أي من طرفي هذا العقد إلى الطرف الآخر على عنوانه المبين
+                                        بصدر
+                                        هذا العقد تعتبر صحيحة ومنتجة لكافة آثارها القانونية. ويتعهد الموظف بإخطار صاحب
+                                        العمل
+                                        كتابة فور أي تغيير يطرأ على هذا العنوان وتاريخه .
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left" style="border:1px solid black;">Article (16)
+
+                                        The Agreement is written in both Arabic and English, in case of discrepancies of
+                                        interpretation of the Agreement, the Arabic version shall prevail.
+                                    </td>
+                                    <td class="text-right" style="border:1px solid black">المادة (16)
+
+                                        حرر هذا العقد باللغة العربية واللغة الانجليزية وفى حالة وجود خلاف حول تفسير هذا
+                                        العقد بين اللغتين، يُؤخذ باللغة العربية.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left" style="border:1px solid black;">Article (17)
+                                        17.1 The Agreement sets forth the entire understanding of the Parties with
+                                        respect
+                                        to the subject matter hereof and shall supersede all and any prior or existing
+                                        agreement between the Employer and the Employee or any of the Employer’s
+                                        affiliated
+                                        company that may exist on the date of the Date of Signature.
+
+                                        17.2 The Employee hereby declares that there are no agreements with any third
+                                        party
+                                        which may be in conflict with, violate or supersede this Agreement.
+                                    </td>
+                                    <td class="text-right" style="border:1px solid black">المادة (17)
+                                        17-1 يعد هذا العقد الاتفاق الكامل بين اطرافه بخصوص موضوعه، ويسمو على اى اتفاق
+                                        اخر
+                                        أبُرم مسبقاً أو قائماً حالياً بين الموظف وصاحب العمل أو بين الموظف واحدى الشركات
+                                        التابعة لصاحب العمل قبل تاريخ التوقيع.
+
+                                        17-2 يتعهد الموظف بعدم وجودأي إتفاقات أخرى مع الغير قد تتعارض أو تنتهك أو
+                                        تعلوهذا
+                                        العقد.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left" style="border:1px solid black;">Article )18(
+                                        The Agreement shall be valid and legally binding on both Parties from the
+                                        Effective
+                                        Date.
+                                    </td>
+                                    <td class="text-right" style="border:1px solid black">المادة (18)
+                                        يسري هذا العقد وينفذ في مواجهة الاطراف إعتباراً من تاريخ السريان.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left" style="border:1px solid black;">Article (19)
+
+                                        The Agreement is concluded in three copies of which:
+                                        ㅎ- One copy to the Employer.
+                                        ㄱ- One copy to the Employee.
+                                        ㄴ- One copy for social insurance.
+
+                                        First Party (Employer)
+                                        Polaris For Project Management
+
+                                        Represented by
+                                        Name: Mr. Mohammed Kassem
+                                        Title: Chairman
+                                        Signature:
+
+
+                                        Second Party (Employee)
+                                        Name: ............................................................
+                                        Title: ...............................................
+                                        Signature:
+                                    </td>
+                                    <td class="text-right" style="border:1px solid black">المادة (19)
+
+                                        تحرر هذا العقد من ثلاث نسخ تسلم كالآتي:
+                                        - نسخة لصاحب العمل
+                                        - نسخة للموظف
+                                        - نسخة للتأمينات الاجتماعية.
+
+                                        الطرف الاول (صاحب العمل)
+                                        شركة بولاريس لادارة المشروعات
+                                        ويمثله
+                                        الاسم:السيد/ : محمد قاسم
+                                        الصفة: رئيس مجلس الادارة
+
+
+                                        الطرف الثانى (الموظف)
+                                        الاسم: السيد / ...........................................
+                                        الصفة: .........................
+                                        التوقيع:
+
+                                    </td>
+                                </tr>
+                            </body>
+                        </table>
+
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
+

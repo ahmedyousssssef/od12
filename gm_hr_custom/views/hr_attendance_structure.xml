@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="hr_attendance_structure_form" model="ir.ui.view">
+            <field name="name">hr.attendance.structure.form</field>
+            <field name="model">hr.attendance.structure</field>
+            <field name="arch" type="xml">
+                <form string="Attendance Structure">
+                    <sheet>
+                        <group col="4">
+                            <field name="name"/>
+                            <field name="code"/>
+                        </group>
+                        <notebook>
+                            <page string="Bonus Rules" name="bonus_rules">
+                                <!--<group style="width:60%">-->
+                                    <!--<field name="bonus_type" required="1"/>-->
+                                <!--</group>-->
+                                <field name="rule_bonus_ids"/>
+                            </page>
+                            <page string="Deduction Rules" name="deduction_rules">
+                                <field name="rule_deduction_ids"/>
+                            </page>
+                            <page string="Permissions" name="hr_permission">
+                                <group style="width:60%">
+                                    <field name="permission"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+
+            </field>
+        </record>
+
+        <record id="hr_attendance_structure_action" model="ir.actions.act_window">
+            <field name="name">Attendance Structure</field>
+            <field name="res_model">hr.attendance.structure</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    This rules will be applied on all employees
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="hr_attendance_structure_menu" name="Attendance Structure"
+                  parent="gm_hr_custom.attendace_menu_setting"
+                  action="hr_attendance_structure_action" sequence="4"/>
+
+    </data>
+</odoo>

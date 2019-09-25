@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="working_time_wiz_form" model="ir.ui.view">
+            <field name="name">working.time.wiz.form</field>
+            <field name="model">working.time.wiz</field>
+            <field name="arch" type="xml">
+                <form string="Form">
+                    <sheet>
+                        <group>
+                            <field name="calendar_id"/>
+                            <field name="employee_ids"/>
+                        </group>
+                        <footer>
+                            <button name="assign_working_time_to_employees" string="Assign" type="object"
+                                    class="oe_highlight"/>
+                            <button string="Cancel" class="oe_link" special="cancel"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_working_time_wiz_view" model="ir.actions.act_window">
+            <field name="name">Working Time Wizard</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">working.time.wiz</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="action_menu_working_time" name="Working Time Assign" parent="hr_attendance.menu_hr_attendance_root" action="action_working_time_wiz_view" sequence="90"/>
+
+
+    </data>
+</odoo>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Inherit Form View to Modify it -->
+        <record id="hr_employee_form_view_inherit_view" model="ir.ui.view">
+            <field name="name">hr.employee.form.inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <!--<xpath expr="//notebook//page[@name='hr_settings']" position="inside">-->
+                    <!--<group string="Overtime" name="overtime_group">-->
+                        <!--<field name="fixed_overtime"/>-->
+                    <!--</group>-->
+                <!--</xpath>-->
+                <!--<xpath expr="//div[@class='oe_title']" position="replace">-->
+                    <!--<div class="oe_title">-->
+                        <!--<label for="employee_id" class="oe_edit_only"/>-->
+                        <!--<h3>-->
+                            <!--<field name="employee_id" style="width: 10em"/>-->
+                        <!--</h3>-->
+                        <!--<label for="name" class="oe_edit_only"/>-->
+                        <!--<h2>-->
+                            <!--<field name="name" readonly="1"/>-->
+                        <!--</h2>-->
+                    <!--</div>-->
+                <!--&lt;!&ndash;</xpath>&ndash;&gt;-->
+                <!--<xpath expr="//page[@name='hr_settings']//group" position="inside">-->
+                    <!--<group string="Attendance Rule" name="attendance_group">-->
+                        <!--<field name="attendance_id"/>-->
+                    <!--</group>-->
+                <!--</xpath>-->
+
+                <!--<xpath expr="//page[@name='personal_information']//group//group//field[@name='identification_id']"-->
+                       <!--position="after">-->
+                    <!--<field name="street"/>-->
+                <!--</xpath>-->
+
+                <!--<xpath expr="//page[@name='public']//group//group//field[@name='coach_id']" position="after">-->
+                    <!--<field name="senior_id"/>-->
+                <!--</xpath>-->
+                <xpath expr="//notebook" position="inside">
+                    <page name="addtions" string="Additions">
+                        <group col="4">
+                            <field name="job_nature_allwance_10"/>
+                            <field name="taxable_allowance"/>
+                            <field name="social_allowance"/>
+                            <field name="transportation_allowance"/>
+                            <field name="special_social_allowance"/>
+                            <field name="other_allowance"/>
+                            <field name="sea_allowance10"/>
+                            <field name="job_nature_allwance_5"/>
+                            <field name="time_allwance_15"/>
+                            <field name="representation_allwance_20"/>
+                            <field name="sea_allowance5"/>
+                            <field name="time_allwance_25"/>
+                            <field name="representation_allwance_30"/>
+                            <field name="representation_allwance_15"/>
+                            <field name="representation_allwance_10"/>
+                            <field name="grade_allowance"/>
+                            <field name="correction"/>
+                            <field name="add_rewards"/>
+                            <field name="add_profit"/>
+                            <field name="add_bonus"/>
+                        </group>
+                    </page>
+                </xpath>
+
+            </field>
+        </record>
+
+        <!--&lt;!&ndash; Inherit Form View to Modify it &ndash;&gt;-->
+        <!--<record id="hr_view_employee_filter_001" model="ir.ui.view">-->
+            <!--<field name="name">hr.employee.search</field>-->
+            <!--<field name="model">hr.employee</field>-->
+            <!--<field name="inherit_id" ref="hr.view_employee_filter"/>-->
+            <!--<field name="arch" type="xml">-->
+
+                <!--<xpath expr="//field[@name='department_id']" position="after">-->
+                    <!--<field name="employee_id"/>-->
+                <!--</xpath>-->
+
+            <!--</field>-->
+        <!--</record>-->
+
+
+    </data>
+</odoo>

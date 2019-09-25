@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="holidays_send_mail" model="mail.template">
+            <field name="name">تم ارسال طلب اجازه    </field>
+            <field name="model_id" ref="model_hr_leave"/>
+            <field name="email_from">${(object.company_id.email or '')|safe}</field>
+            <field name="subject"><![CDATA[ طلب اجازه ]]></field>
+            <field name="auto_delete" eval="True"/>
+            <field name="lang">${object.lang}</field>
+            <field name="body_html">
+                <![CDATA[
+                <div style="text-align: right;direction:rtl">
+                    <p style="text-align: right">السيد</p>
+                        <p style="font-size: 1.1em;text-align: right">
+                            السلام عليكم ورحمة الله.
+
+                        </p>
+
+
+                        <br/>
+                        <p style="text-align: right">وصف الاجازه    ${object.name}  </p>
+                        <br/>
+                        <br/>
+                        <p style="text-align: right">طالب الاجازه    ${object.employee_id.name}  </p>
+                        <br/>
+
+
+                </div>
+                ]]></field>
+        </record>
+
+
+    </data>
+</odoo>
